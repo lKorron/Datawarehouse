@@ -1,0 +1,27 @@
+
+// quick bg
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+
+
+// center block elements
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}

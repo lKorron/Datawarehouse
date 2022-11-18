@@ -1,0 +1,83 @@
+@import "base/general";
+.introduction {
+    &__body {
+        margin-top: 130px;
+        position: relative;
+    }
+
+    $titleFontSize: 80px;
+
+    &__title {
+        
+        max-width: 645px;
+        margin-bottom: 50px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $titleFontSize;
+        line-height: 110%;      
+        color: $darkBlue;
+    }
+
+    &__text {
+        max-width: 380px;
+        margin-bottom: 50px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: $textFontSize;
+        line-height: 160%;
+    }
+
+    &__button {
+        margin-bottom: 100px;
+    }
+    
+    &__image {
+        $imageWidth: 885px;
+        $imageHeight: 468px;
+
+        position: absolute;
+        top: 20%;
+        right: -12%;
+        width: $imageWidth;
+        height: $imageHeight;
+        z-index: -1;
+
+        img {
+            width: $imageWidth;
+            height: $imageHeight;
+            
+        }
+    }
+
+    @media (max-width: $md1) {
+        &__image {
+            filter: opacity(0.4);
+        }
+    }
+
+    @media (max-width: $md2) {
+        &__image {
+            filter: opacity(0.3);
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    @media (max-width: $md3) {
+        &__image {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @media (max-width: 620px) {
+        &__title {
+            font-size: $titleFontSize * 0.5;
+        }
+    }
+}

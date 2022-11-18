@@ -1,0 +1,99 @@
+.popup-request {
+
+    &__content {
+        color: $darkBlue;
+    }
+
+    
+    &__name {
+        text-align: center;
+        font-size: $fontSize * 1.5;
+        margin-bottom: 20px;
+    }
+
+
+    &__form {
+        div:not(:last-of-type) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .email-block__label {
+            margin-right: 30px;
+        }
+
+        .request-form__options-block {
+            .options-block__show {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+
+        .show-password {
+            background-color: $purple;
+
+            &:hover span {
+                
+                color: black;
+                cursor: pointer;
+            }
+
+            &:active span {
+                color: white;
+            }
+
+            span {
+                display: block;
+                margin-top: 2.5px;
+                color: $darkBlue;
+            }
+        }
+        
+    }
+
+    .options-block {
+
+
+        &__show {
+            :first-child {
+                margin-right: 7px;
+            }
+        }
+        
+        &__allow {
+
+        }
+
+    }
+
+
+    
+    .request-form {
+    }
+    .request-form__email-block {
+    }
+    .email-block {
+    }
+    .email-block__label {
+    }
+    .request-form__password-block {
+    }
+    .password-block {
+    }
+   
+    
+    .options-block__label {
+    }
+   
+    .request-form__submit-button {
+    }
+    .button {
+    }
+    .button_purple {
+    }
+    .button__text {
+    }
+
+
+}

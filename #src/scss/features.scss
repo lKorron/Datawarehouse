@@ -1,0 +1,144 @@
+.features {
+    margin-top: 150px;
+
+    &__article {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+    
+    &__text {
+        @include push--auto;
+        max-width: 584px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 140px;
+        row-gap: 50px;
+        margin-left: 90px;
+
+        @media (max-width: $md1) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    .card {
+        width: 442px;  // переопределить
+        height: 358px; // и это тоже
+        background-color: $lightGreen;
+        border-radius: 50px;
+
+        &_search {
+            background: url("../img/bg/bg_green.png") no-repeat;
+        }
+
+        &_access {
+            background: url("../img/bg/bg_purple.png") no-repeat;
+        }
+
+        &_print {
+            background: url("../img/bg/bg_pink.png") no-repeat;
+        }
+
+        &_security {
+            background: url("../img/bg/bg_green.png") no-repeat;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            max-width: 230px;
+            height: 100%;
+            margin-left: auto;
+            padding-top: 50px;
+            margin-right: 50px;
+
+            
+
+            .card__image {
+                position: absolute;
+                top: 25%;
+                left: -249px;
+            }
+        }
+
+        &__title {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 130%;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        &__link {
+            display: block;
+        }
+        
+        .link {
+            
+            &__text {
+                display: inline;
+                position: relative;
+                color: $darkBlue;
+                transition: all 0.2s;
+                
+                span {
+                    color: $purple;
+                    position: absolute;
+                    right: -30px;
+                    transition: all 0.2s;
+                }
+            }
+
+            &:hover {
+                .link__text, span {
+                    color: $pink;
+                }
+            }
+
+        }
+
+        
+    }
+
+
+    @media (max-width: 620px) {
+            .card {
+                transform: scale(0.8);
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                background-size: cover !important;
+
+                &__body {
+                    margin: 0 0 0 45px;
+                    .card__image {
+                        top: -28% ;
+                        left: 5%;
+                    }
+                }
+
+                &__article {
+
+                }
+            }
+
+            .features__cards {
+                margin-left: 0;
+            }
+
+        }
+}

@@ -1,0 +1,13 @@
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-28px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

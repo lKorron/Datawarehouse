@@ -1,0 +1,88 @@
+@use "sass:math";
+
+//&display=swap
+//@import url("font");
+//@import "fonts";
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,700);
+
+$fontFamily: "Rubik";
+$fontSize: 16px;
+
+$minWidth: 320px; // минимальная ширина страницы
+$maxWidth: 1920px; // ширина макета
+$maxWidthContainer: 1117px; // ширина ограничивающего контейнера
+$containerPadding: 30px; // отступ ограничивающего контейнера
+
+$md1: $maxWidthContainer + $containerPadding; // пк
+$md2: 991.98px; // планшеты
+$md3: 767.98px; // телефоны L
+$md4: 479.98px; // телефоны S
+
+//Colors
+$mainColor: #4B5D68;
+$bgColor: #fff;
+
+$darkBlue: rgba(33, 35, 83, 1);
+$purple: #9C69E2;
+$lightPurple: rgba(156, 105, 226, 0.25);
+$pink: #F063B8;
+$lightPink: rgba(240, 99, 184, 0.15);
+$green: #68C9BA;
+$lightGreen: rgba(104, 201, 186, 0.1);
+$blue: #2D9CDB;
+
+
+@import "base/null";
+@import "base/mixins";
+
+// page parts
+@import "header.scss";
+@import "introduction.scss";
+@import "about-us.scss";
+@import "features.scss";
+@import "testimonials.scss";
+@import "try.scss";
+@import "footer.scss";
+
+@import "base/general.scss";
+@import "base/iconsfont.scss";
+@import "base/animations.scss";
+
+// additional
+@import "popup/popup.scss";
+@import "popup/popup-request.scss";
+
+body {
+    color: $mainColor;
+    background-color: $bgColor;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: auto 1fr auto;
+    min-width: $minWidth;
+    max-width: $maxWidth;
+    .loaded & {
+
+    }
+}
+
+[class*="__container"] {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    @media (max-width: $md1) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3) {
+        max-width: none;
+        padding: 0 15px;
+    }
+}
